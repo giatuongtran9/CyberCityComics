@@ -1,7 +1,7 @@
 class Comic {
     constructor() {
-    // const url = "https://cybercity-comic.herokuapp.com/"
-    const url = "https://localhost:8000/"
+    const url = "https://cybercity-comic.herokuapp.com/"
+    // const url = "https://localhost:8000/"
 
     this.currentNum = 0;
 
