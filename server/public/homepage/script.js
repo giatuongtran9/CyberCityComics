@@ -1,6 +1,6 @@
 class Comic {
     constructor() {
-    const url = "localhost:8000"
+    const url = "https://cybercity-comic.herokuapp.com/"
 
     this.currentNum = 0;
 
@@ -92,7 +92,8 @@ class Comic {
     //GET COMIC BY NUMBER
     //USING FETCH
     getComicByNum(num) {
-        fetch(`/getData/${num}`)
+        const requestUrl = '/getData'
+        fetch(`${requestUrl}/${num}`)
         .then(res => {
             return res.json()
         })
