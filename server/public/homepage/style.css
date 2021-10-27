@@ -1,0 +1,96 @@
+/*
+    Problem: Comic#1134 when set #content div height to auto the image resize responsive
+    but the transcript cannot stretch out therefore I need to set its height to 60vh
+    When reduce the window size, it narrow to a small size
+*/
+
+/* outside container */
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+#content1 {
+  flex: 1;
+}
+
+/* Keep the original size of the image, scale down when the window size reduce*/
+#image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Transcript Div */
+#content2 {
+  flex: 1;
+  height: 60vh;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100%;
+
+  min-width: 80%;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+#transcript {
+  text-align: center;
+  border: none;
+}
+
+#title {
+  text-align: center;
+}
+
+#button {
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ddd;
+  color: black;
+}
+
+#next,
+#prev {
+  border-radius: 50%;
+  font-size: larger;
+}
+
+@media screen and (max-width: 1200px) {
+  #content {
+    flex-direction: column;
+  }
+
+  #content2 {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    width: 100%;
+  }
+}
