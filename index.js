@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const path = require('path')
 const bodyParser = require('body-parser')
 const fs = require('fs')
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 const router = express.Router()
 
