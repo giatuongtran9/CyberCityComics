@@ -98,4 +98,12 @@ button:hover {
   #container {
     width: 100%;
   }
+
+  #title {
+    font-size: 4rem;
+  }
+
+  pre {
+    font-size: 2rem;
+  }
 }
