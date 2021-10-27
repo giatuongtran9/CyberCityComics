@@ -4,6 +4,10 @@
     When reduce the window size, it narrow to a small size
 */
 
+#title {
+  font-size: 3rem;
+}
+
 /* outside container */
 #container {
   display: flex;
@@ -33,24 +37,22 @@
 
 /* Transcript Div */
 #content2 {
-  flex: 1;
-  height: 60vh;
+  flex: 2;
+  height: auto;
+  width: auto;
+  border: 1px solid black;
 }
 
-textarea {
-  width: 100%;
-  min-height: 100%;
-
-  min-width: 80%;
-}
-
-textarea::-webkit-scrollbar {
-  display: none;
+pre {
+  resize: both;
+  overflow: auto;
+  white-space: pre-wrap;
 }
 
 #transcript {
   text-align: center;
   border: none;
+  font-size: 1rem;
 }
 
 #title {
@@ -59,6 +61,7 @@ textarea::-webkit-scrollbar {
 
 #button {
   text-align: center;
+  width: auto;
 }
 
 button {
@@ -66,6 +69,7 @@ button {
   padding: 8px 16px;
   margin: 20px;
   margin-bottom: 50px;
+  font-size: larger;
 }
 
 button:hover {

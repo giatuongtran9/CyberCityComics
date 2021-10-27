@@ -1,6 +1,7 @@
 class Comic {
     constructor() {
-    const url = "https://cybercity-comic.herokuapp.com/"
+    // const url = "https://cybercity-comic.herokuapp.com/"
+    const url = "https://localhost:8000/"
 
     this.currentNum = 0;
 
@@ -65,9 +66,10 @@ class Comic {
         imageDiv.title = book.alt
     
         const transcriptDiv = document.getElementById("transcript")
-
+        var styleTrans = book.transcript.replace(/[\[\]']+/g, "")
+        
         if (book.transcript !== "") {
-            transcriptDiv.innerHTML = book.transcript
+            transcriptDiv.innerText = styleTrans
         } else {
             transcriptDiv.innerHTML = "No Transcript available"
         }
